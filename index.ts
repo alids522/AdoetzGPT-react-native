@@ -1,3 +1,8 @@
+// MUST be first: polyfills global.crypto (getRandomValues) for `uuid`, which
+// Hermes on Android does not provide by default. Without this, the store crashes
+// at startup (Session.empty -> uuidv4 -> ReferenceError: crypto doesn't exist).
+import 'react-native-get-random-values';
+
 import { registerRootComponent } from 'expo';
 
 import App from './App';
