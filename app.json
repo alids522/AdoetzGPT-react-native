@@ -1,25 +1,67 @@
 {
   "expo": {
-    "name": "adoetzgpt-rn",
-    "slug": "adoetzgpt-rn",
+    "name": "AdoetzGPT",
+    "slug": "adoetzgpt",
+    "scheme": "adoetzgpt",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/app_logo.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adoetzgpt"
     },
     "android": {
+      "package": "com.adoetzgpt",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/app_logo.png",
+        "backgroundColor": "#0B0B0F"
       },
+      "permissions": [
+        "INTERNET",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MICROPHONE",
+        "POST_NOTIFICATIONS",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO"
+      ],
       "predictiveBackGestureEnabled": false
     },
+    "splash": {
+      "image": "./assets/app_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000",
+      "dark": {
+        "image": "./assets/app_logo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#000000"
+      }
+    },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/app_logo.png"
+    },
+    "plugins": [
+      "expo-splash-screen",
+      "expo-image",
+      "expo-font",
+      "expo-secure-store",
+      "expo-asset",
+      "expo-audio",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "AdoetzGPT uses the camera for Gemini Live video.",
+          "microphonePermission": "AdoetzGPT uses the microphone for Gemini Live voice."
+        }
+      ]
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
   }
 }

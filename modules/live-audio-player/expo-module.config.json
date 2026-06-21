@@ -1,0 +1,9 @@
+{
+  "platforms": ["android", "ios"],
+  "ios": {
+    "modules": ["LiveAudioPlayerModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.liveaudioplayer.LiveAudioPlayerModule"]
+  }
+}
